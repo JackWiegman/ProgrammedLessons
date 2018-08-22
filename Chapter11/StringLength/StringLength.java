@@ -8,6 +8,11 @@ public class StringLength {
 		len = str.length();
 
 		System.out.println("The length is: " + len);
+
+		String spaced = new String("    Elementary, my dear Watson");
+		String trimed = spaced.trim();
+
+		System.out.println(trimed);
 	}
 
 }
