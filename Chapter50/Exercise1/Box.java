@@ -13,7 +13,21 @@ public class Box {
 	}
 
 	public double area() {
-		return 2 * ((width * length) + (height * length) + (height * width));
+		return 2 * (faceArea() + topArea() + sideArea());
 	}
+
+	private double faceArea() {
+		return width * height;
+	} 
+
+	private double topArea() {
+		return width * length();
+	}
+
+	private double sideArea() {
+		return length * height;
+	}
+
+
 
 }
