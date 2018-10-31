@@ -8,6 +8,10 @@ public class Box {
 		this.length = length;
 	}
 
+	Box(Box oldBox) {
+		return new Box(width, height, length);
+	}
+
 	public double volume() {
 		return width * length * height;
 	}
@@ -26,6 +30,22 @@ public class Box {
 
 	private double sideArea() {
 		return length * height;
+	}
+
+	public double width() {
+		return width;
+	}
+
+	public double height() {
+		return height;
+	}
+
+	public double length() {
+		return length;
+	}
+
+	public Box biggerBox(Box oldBox) {
+		return new Box(1.25 * oldBox.width(), 1.25 * oldBox.height, 1.25 * oldBox.length);
 	}
 
 
