@@ -20,8 +20,8 @@ class Pantry
   {
     String str = "";
     str += "1: " +  jar1.toString()  + "\n";
-    str += "2: " +  jar1.toString()  + "\n";
-    str += "3: " +  jar1.toString()  + "\n";     
+    str += "2: " +  jar2.toString()  + "\n";
+    str += "3: " +  jar3.toString()  + "\n";     
     return str;
   }
 
@@ -43,4 +43,8 @@ class Pantry
   {
     selected . spread( oz ) ;
   }
+
+  
+
 }
+
