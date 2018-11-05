@@ -9,11 +9,11 @@ public class Exercise1
     Jam apple = new Jam( "Crab Apple", "9/30/99", 8 );
     Jam rhub  = new Jam( "Rhubarb", "10/31/99", 3 );
 
-    Pantry pantry = new Pantry(goose, apple, rhub);
+    Pantry hubbard = new Pantry(goose, apple, rhub);
     int jamSelection = 0;
 
     while (jamSelection != -1) {
-      System.out.println(pantry + "\nEnter your selection (1, 2, or 3): ");
+      System.out.println(hubbard + "\nEnter your selection (1, 2, or 3): ");
       jamSelection = scan.nextInt();
 
       if (jamSelection > 3) {
@@ -29,8 +29,8 @@ public class Exercise1
           System.out.println("Enter amount to spread: ");
           int amountSpread = scan.nextInt();
       
-          pantry.select(jamSelection);
-          pantry.spread(amountSpread);
+          hubbard.select(jamSelection);
+          hubbard.spread(amountSpread);
         }
       }
     }
