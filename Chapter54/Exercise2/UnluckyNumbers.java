@@ -6,11 +6,10 @@ public class UnluckyNumbers {
 		while (num != 0) {
 			if (num == 13) {
 				return true;
-			} else if (num == 0) {
-				return false;
-			}
-			num /= 10;
+			} 
+			num = num / 10;
 		}
+		return false;
 	}
 
 	public static void main(String[] args) {
