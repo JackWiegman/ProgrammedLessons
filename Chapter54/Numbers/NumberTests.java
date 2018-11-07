@@ -61,7 +61,11 @@ public class NumberTests {
 		}*/
 
 		
-		
+		for (int i = 0; i <= 10000; i++) {
+			if (!checkOdious(i) && checkUnlucky(i)) {
+				System.out.println(i + " is odious and unlucky.");
+			}
+		}
 
 		
 	}
