@@ -36,6 +36,21 @@ public class NumberTests {
 		return false;
 	}
 
+	public static boolean checkPerfect(int num) {
+		int sumDivisors = 0;
+		for (int i = 1; i < num; i++) {
+			if (num % i == 0) {
+				sumDivisors += i;
+			}
+		}
+
+		if (sumDivisors == num) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -60,13 +75,22 @@ public class NumberTests {
 			System.out.println(unluckyNum + " is not an unlucky number.");
 		}*/
 
-		
-		for (int i = 0; i <= 10000; i++) {
+		// Find all evil and unlucky numbers from 0 to some upper limit
+		/*for (int i = 0; i <= 10000; i++) {
 			if (!checkOdious(i) && checkUnlucky(i)) {
 				System.out.println(i + " is odious and unlucky.");
 			}
-		}
+		}*/
 
+		// Find if any numbers to an upper limit are perfect numbers
+		System.out.println("Enter upper limit: ");
+		int upperLimit = scan.nextInt();
+
+		for (int i = 1; i <= upperLimit; i++) {
+			if (checkPerfect(i)) {
+				System.out.println(i + " is a perfect number.");
+			}
+		}
 		
 	}
 
