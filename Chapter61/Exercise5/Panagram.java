@@ -3,16 +3,36 @@ import java.util.Scanner;
 public class Panagram {
 
 	public static void main (String[] args) {
-		int[] letterCount = new int[25];
+		boolean allLetters = true;
+
+		boolean[] letterCount = new boolean[25];
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Enter a sentence: ");
 		String sentence = scan.nextLine();
+		String lowerSen = (sentence.toLowerCase()).trim();
+		System.out.println(lowerSen);
 
-		for (int i = 0; i <= letterCount.length; i++) {
-			int letter = 
+		int letter = 0;
+		for (char i = 'a'; i <= 'z'; i++) {
+			for (int j = 0; j <= lowerSen.length() - 1; j++) {
+				if (lowerSen.charAt(j) == i) {
+					letterCount[j] = true;
+				}
+			}
 		}
 
+		for (int i = 0; i <= letterCount.length - 1; i++) {
+			if (!letterCount[i]) {
+				allLetters = false;
+			}
+		}
+
+		if (allLetters) {
+			System.out.println("Sentence is a Panagram.");
+		} else {
+			System.out.println("Sentence is not a Panagram.");
+		}
 
 
 	}
