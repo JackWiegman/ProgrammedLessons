@@ -5,7 +5,7 @@ public class Panagram {
 	public static void main (String[] args) {
 		boolean allLetters = true;
 
-		boolean[] letterCount = new boolean[25];
+		int[] letterCount = new int[26];
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Enter a sentence: ");
@@ -17,13 +17,13 @@ public class Panagram {
 		for (char i = 'a'; i <= 'z'; i++) {
 			for (int j = 0; j <= lowerSen.length() - 1; j++) {
 				if (lowerSen.charAt(j) == i) {
-					letterCount[j] = true;
+					letterCount[j]++;
 				}
 			}
 		}
 
 		for (int i = 0; i <= letterCount.length - 1; i++) {
-			if (!letterCount[i]) {
+			if (letterCount[i] == 0) {
 				allLetters = false;
 			}
 		}
