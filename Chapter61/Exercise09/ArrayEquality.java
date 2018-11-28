@@ -37,7 +37,7 @@ class ArrayEquality {
       System.out.println( "NOT Equal" );      
 
     System.out.print("myEquals says: ");
-    if ( Arrays.equals(arrayA, arrayB) )
+    if ( myEquals(arrayA, arrayB) )
       System.out.println( "Equal" );
     else
       System.out.println( "NOT Equal" );      
