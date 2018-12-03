@@ -1,7 +1,9 @@
 class Weight
 {
   private int[] data;
-  
+  private int sum = 0;
+  private int avg = 0;
+
   // Constructor
   public Weight(int[] init)
   {
@@ -24,11 +26,22 @@ class Weight
     String dataStr = "";
 
     for (int i = 0; i < data.length; i++) {
-      dataStr += (data[i]);
+      dataStr += ("\n" + data[i]);
     }
 
-    return dataStr;
+    return ("Data: " + dataStr + "\nAverage: " + avg);
  
+  }
+
+  public int average() {
+
+
+    for (int i = 0; i < data.length; i++) {
+      sum += data[i];
+    }
+
+    avg = sum / data.length;
+    return avg;
   }
 }
 
