@@ -43,5 +43,18 @@ class Weight
     avg = sum / data.length;
     return avg;
   }
+
+  public int subAverage(int start, int end) {
+    sum = 0;
+    for (int i = start; i < end; i++) {
+      sum += data[i];
+    }
+
+    avg = sum / (end - start);
+
+    return avg;
+
+  }
+
 }
 
