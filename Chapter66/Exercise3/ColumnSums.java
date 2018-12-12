@@ -12,12 +12,42 @@ public class ColumnSums
     
     // declare the sum
     int sum = 0;
+    int max = 0;
     
     // compute the sums for each row
     for (int row = 0; row < data.length; row++) {
-      for (int col = 0; col < data[row].length) {
-        
+      for (int col = 0; col < data[row].length; col++) {
+        if (col > max) {
+          max = col;
+        }
       }
     }   
+
+    int[] colSums = new int[max + 1];
+
+    int colsLeft = 0;
+
+    for (int row = 0; row < data.length; row++) {
+      if (data[row].length < max) {
+
+        colsLeft = max - data[row].length;
+
+        for (int col = 0; col < data[row].length + colsLeft; col++) {
+
+          if (col < data[row].length) {
+            colSums[col] += data[row][col];
+          } else {
+            colSums[col] = 0;
+          }
+
+        }
+
+      }
+    }  
+
+    for (int i = 0; i < colSums.length; i++) {
+      System.out.println("Column " + (i + 1) + " sum: " + colSums[i]);
+    }
+
   }
 }      
