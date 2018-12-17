@@ -34,7 +34,7 @@ class PhoneBook
   {
     for ( int j=0; j < phoneBook.length; j++ )
     {
-      if ( phoneBook[ j] != null && phoneBook[ j ].getName().equals( targetName ) )
+      if ( phoneBook[ j] != null && (phoneBook[ j ].getName().toUpperCase().equals( targetName.toUpperCase() ) ) )
         return phoneBook[ j ];
     }
 
