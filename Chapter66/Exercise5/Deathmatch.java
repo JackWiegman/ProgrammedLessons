@@ -50,7 +50,7 @@ class Firefly {
 
 class BuildFireflies {
 
-	int numberFireflies = 100;
+	int numberFireflies = 1000;
 
 	public Firefly[] warriors;
 
